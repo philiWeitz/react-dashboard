@@ -400,6 +400,15 @@
     "@babel/helper-create-class-features-plugin" "^7.8.3"
     "@babel/helper-plugin-utils" "^7.8.3"
 
+"@babel/plugin-proposal-decorators@7.10.4":
+  version "7.10.4"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.10.4.tgz#fe20ef10cc73f386f70910fca48798041cd357c7"
+  integrity sha1-/iDvEMxz84b3CRD8pIeYBBzTV8c=
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.10.4"
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/plugin-syntax-decorators" "^7.10.4"
+
 "@babel/plugin-proposal-decorators@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.8.3.tgz#2156860ab65c5abf068c3f67042184041066543e"
@@ -479,6 +488,13 @@
   integrity sha512-tycmZxkGfZaxhMRbXlPXuVFpdWlXpir2W4AMhSJgRKzk/eDlIXOhb2LHWoLpDF7TEHylV5zNhykX6KAgHJmTNw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
+
+"@babel/plugin-syntax-decorators@^7.10.4":
+  version "7.10.4"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.10.4.tgz#6853085b2c429f9d322d02f5a635018cdeb2360c"
+  integrity sha1-aFMIWyxCn50yLQL1pjUBjN6yNgw=
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-syntax-decorators@^7.8.3":
   version "7.8.3"
@@ -1283,7 +1299,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@material-ui/core@^4.11.0":
+"@material-ui/core@4.11.0":
   version "4.11.0"
   resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/@material-ui/core/-/core-4.11.0.tgz#b69b26e4553c9e53f2bfaf1053e216a0af9be15a"
   integrity sha1-tpsm5FU8nlPyv68QU+IWoK+b4Vo=
@@ -1301,7 +1317,7 @@
     react-is "^16.8.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.9.1":
+"@material-ui/icons@4.9.1":
   version "4.9.1"
   resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/@material-ui/icons/-/icons-4.9.1.tgz#fdeadf8cb3d89208945b33dbc50c7c616d0bd665"
   integrity sha1-/erfjLPYkgiUWzPbxQx8YW0L1mU=
@@ -1503,7 +1519,7 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/chart.js@^2.9.22":
+"@types/chart.js@2.9.22":
   version "2.9.22"
   resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/@types/chart.js/-/chart.js-2.9.22.tgz#e52fd922aced217867445c2913b68ce98b1c2b5f"
   integrity sha1-5S/ZIqztIXhnRFwpE7aM6YscK18=
@@ -1888,7 +1904,7 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.1.tgz#e35668de0b402f359de515c5482a1ab9f89a69bf"
   integrity sha512-add7dgA5ppRPxCFJoAGfMDi7PIBXq1RtGo7BhbLaxwrXPOmw8gq48Y9ozT01hUKy9byMjlR20EJhu5zlkErEkg==
 
-add@^2.0.6:
+add@2.0.6:
   version "2.0.6"
   resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
   integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
@@ -2835,7 +2851,7 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chart.js@^2.9.3:
+chart.js@2.9.3:
   version "2.9.3"
   resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/chart.js/-/chart.js-2.9.3.tgz#ae3884114dafd381bc600f5b35a189138aac1ef7"
   integrity sha1-rjiEEU2v04G8YA9bNaGJE4qsHvc=
@@ -3553,6 +3569,13 @@ csstype@^2.2.0, csstype@^2.5.2, csstype@^2.6.5, csstype@^2.6.7:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.11.tgz#452f4d024149ecf260a852b025e36562a253ffc5"
   integrity sha512-l8YyEC9NBkSm783PFTvh0FmJy7s5pFKrDp49ZL7zBGX3fWkO+N4EEyan1qqp8cwPLDcD0OSdyY6hAMoxp34JFw==
+
+customize-cra@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/customize-cra/-/customize-cra-1.0.0.tgz#73286563631aa08127ad4d30a2e3c89cf4e93c8d"
+  integrity sha1-cyhlY2MaoIEnrU0wouPInPTpPI0=
+  dependencies:
+    lodash.flow "^3.5.0"
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -6712,6 +6735,11 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
+lodash.flow@^3.5.0:
+  version "3.5.0"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/lodash.flow/-/lodash.flow-3.5.0.tgz#87bf40292b8cf83e4e8ce1a3ae4209e20071675a"
+  integrity sha1-h79AKSuM+D5OjOGjrkIJ4gBxZ1o=
+
 lodash.memoize@4.x, lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -7073,6 +7101,33 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@~0.5.1:
   integrity sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
   dependencies:
     minimist "^1.2.5"
+
+mobx-logger@0.7.1:
+  version "0.7.1"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/mobx-logger/-/mobx-logger-0.7.1.tgz#6be44c726e14433463f5fa566f24f1768e2a9355"
+  integrity sha1-a+RMcm4UQzRj9fpWbyTxdo4qk1U=
+
+mobx-react-devtools@6.1.1:
+  version "6.1.1"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/mobx-react-devtools/-/mobx-react-devtools-6.1.1.tgz#a462b944085cf11ff96fc937d12bf31dab4c8984"
+  integrity sha1-pGK5RAhc8R/5b8k30SvzHatMiYQ=
+
+mobx-react-lite@2:
+  version "2.0.7"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/mobx-react-lite/-/mobx-react-lite-2.0.7.tgz#1bfb3b4272668e288047cf0c7940b14e91cba284"
+  integrity sha1-G/s7QnJmjiiAR88MeUCxTpHLooQ=
+
+mobx-react@6.2.2:
+  version "6.2.2"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/mobx-react/-/mobx-react-6.2.2.tgz#45e8e7c4894cac8399bba0a91060d7cfb8ea084b"
+  integrity sha1-RejnxIlMrIOZu6CpEGDXz7jqCEs=
+  dependencies:
+    mobx-react-lite "2"
+
+mobx@5.15.4:
+  version "5.15.4"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/mobx/-/mobx-5.15.4.tgz#9da1a84e97ba624622f4e55a0bf3300fb931c2ab"
+  integrity sha1-naGoTpe6YkYi9OVaC/MwD7kxwqs=
 
 moment@^2.10.2:
   version "2.27.0"
@@ -8818,6 +8873,13 @@ react-app-polyfill@^1.0.6:
     raf "^3.4.1"
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
+
+react-app-rewired@2.1.6:
+  version "2.1.6"
+  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/react-app-rewired/-/react-app-rewired-2.1.6.tgz#33ee3076a7f34d6a7c94e649cac67e7c8c580de8"
+  integrity sha1-M+4wdqfzTWp8lOZJysZ+fIxYDeg=
+  dependencies:
+    semver "^5.6.0"
 
 react-dev-utils@^10.2.1:
   version "10.2.1"
@@ -11228,8 +11290,3 @@ yargs@^13.3.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
-
-yarn@^1.22.4:
-  version "1.22.4"
-  resolved "https://artifactory.platform.vwfs.io/artifactory/api/npm/mps-npm-virtual/yarn/-/yarn-1.22.4.tgz#01c1197ca5b27f21edc8bc472cd4c8ce0e5a470e"
-  integrity sha1-AcEZfKWyfyHtyLxHLNTIzg5aRw4=
