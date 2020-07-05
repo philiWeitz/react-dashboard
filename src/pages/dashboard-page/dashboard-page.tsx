@@ -1,32 +1,57 @@
 import React, { FC } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { BarChartJobOccupation } from '../../components';
 import { inject, observer } from 'mobx-react';
 import { storeName } from '../../mobx/stores';
 import { JobStore } from '../../mobx/stores/job-store';
 import { Job } from '../../mobx/models';
+import { routes } from '../../routes';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: '100px',
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
+  listItem: {
+    cursor: 'pointer',
     color: theme.palette.text.secondary,
   },
 }));
 
-const DashboardComponent: FC<{ jobStore?: JobStore }> = ({ jobStore }) => {
+const DashboardPageComponent: FC<{ jobStore?: JobStore }> = ({ jobStore }) => {
   const classes = useStyles();
+  const history = useHistory();
 
-  const renderJob = (job: Job) => <div key={job.id}>{job.job}</div>;
+  const renderJob = (job: Job) => {
+    const handleOnClick = () => {
+      jobStore?.selectJob(job);
+      history.push(routes.job);
+    };
 
-  const renderJobs = () => <>{jobStore?.filteredJobs.map(renderJob)}</>;
+    return (
+      <>
+        <ListItem
+          onClick={handleOnClick}
+          key={job.id}
+          className={classes.listItem}
+        >
+          <ListItemText primary={job.job} />
+        </ListItem>
+      </>
+    );
+  };
 
-  const renderNoJobsSelected = () => <span>Please Click</span>;
+  const renderJobs = () => (
+    <List dense={true}>{jobStore?.filteredJobs.map(renderJob)}</List>
+  );
+
+  const renderNoJobsSelected = () => (
+    <div>
+      Please click on the graph to drill into the specific job categories
+    </div>
+  );
 
   const renderJobDescriptionSection = () => (
     <Grid item xs={12}>
@@ -51,6 +76,6 @@ const DashboardComponent: FC<{ jobStore?: JobStore }> = ({ jobStore }) => {
   return renderComponent();
 };
 
-export const Dashboard = inject(storeName.JOB_STORE)(
-  observer(DashboardComponent),
+export const DashboardPage = inject(storeName.JOB_STORE)(
+  observer(DashboardPageComponent),
 );

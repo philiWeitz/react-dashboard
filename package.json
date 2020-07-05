@@ -12,6 +12,7 @@
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
     "@types/lodash": "^4.14.157",
+    "@types/react-router-dom": "^5.1.5",
     "add": "2.0.6",
     "axios": "^0.19.2",
     "chart.js": "2.9.3",
@@ -22,6 +23,7 @@
     "mobx-react": "6.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "typescript": "3.9.6"
   },

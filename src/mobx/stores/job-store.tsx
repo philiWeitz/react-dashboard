@@ -12,6 +12,9 @@ export class JobStore {
   @observable
   filteredJobs: Job[] = [];
 
+  @observable
+  selectedJob?: Job = undefined;
+
   @computed
   get isJobFilterActive() {
     return this.filteredJobs.length > 0;
@@ -26,6 +29,11 @@ export class JobStore {
   public fetchJobsFromApi = async () => {
     this.jobs = await fetchJobs();
     this.filteredJobs = [];
+  };
+
+  @action
+  public selectJob = (job: Job) => {
+    this.selectedJob = job;
   };
 
   @action
