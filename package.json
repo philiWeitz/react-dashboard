@@ -22,6 +22,7 @@
     "typescript": "3.9.6"
   },
   "devDependencies": {
+    "@babel/core": "7.10.4",
     "@babel/plugin-proposal-decorators": "7.10.4",
     "@types/chart.js": "2.9.22",
     "@types/jest": "26.0.3",
