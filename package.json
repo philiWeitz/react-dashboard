@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "node server.js",
+    "start-dev": "react-app-rewired start",
     "build": "react-app-rewired build",
     "lint": "tslint src/**/*.ts*"
   },
