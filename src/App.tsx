@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Container } from '@material-ui/core';
-import { Provider } from './mobx/store';
+import { Provider } from './mobx/stores';
 
 function App() {
   return (

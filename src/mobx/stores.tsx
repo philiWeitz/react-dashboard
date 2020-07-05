@@ -2,9 +2,16 @@ import { enableLogging, IMobXLoggerConfig } from 'mobx-logger';
 import { Provider as MobxProvider } from 'mobx-react';
 import React, { FC } from 'react';
 import { AppStateStore } from './stores/app-state-store';
+import { JobStore } from './stores/job-store';
+
+export enum storeName {
+  APP_STATE = 'appState',
+  JOB_STORE = 'jobStore',
+}
 
 const stores = {
   appState: new AppStateStore(),
+  jobStore: new JobStore(),
 };
 
 const mobxLoggerConfig: IMobXLoggerConfig = {

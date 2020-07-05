@@ -1,98 +1,56 @@
-import React from 'react';
-import {
-  Grid,
-  Paper,
-  Table,
-  TableContainer,
-  TableHead,
-  TableCell,
-  TableRow,
-  TableBody,
-} from '@material-ui/core';
+import React, { FC } from 'react';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { BarChart } from '../../components';
+import { BarChartJobOccupation } from '../../components';
+import { inject, observer } from 'mobx-react';
+import { storeName } from '../../mobx/stores';
+import { JobStore } from '../../mobx/stores/job-store';
+import { Job } from '../../mobx/models';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginTop: '100px',
   },
   paper: {
-    height: 300,
-    width: 500,
-  },
-  table: {
-    minWidth: 650,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
 }));
 
-function createData(
-  name: any,
-  calories: any,
-  fat: any,
-  carbs: any,
-  protein: any,
-) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
-export const Dashboard = () => {
+const DashboardComponent: FC<{ jobStore?: JobStore }> = ({ jobStore }) => {
   const classes = useStyles();
 
-  const renderChart = (idx: string) => <BarChart key={idx} />;
+  const renderJob = (job: Job) => <div key={job.id}>{job.job}</div>;
 
-  const renderCharts = () => (
-    <Grid item={true} xs={12}>
-      <Grid container={true} justify="center" spacing={10}>
-        {['0', '1'].map((value) => (
-          <Grid key={value} item={true}>
-            <Paper className={classes.paper}>{renderChart(value)}</Paper>
-          </Grid>
-        ))}
-      </Grid>
+  const renderJobs = () => <>{jobStore?.filteredJobs.map(renderJob)}</>;
+
+  const renderNoJobsSelected = () => <span>Please Click</span>;
+
+  const renderJobDescriptionSection = () => (
+    <Grid item xs={12}>
+      {renderJobs()}
+      {jobStore?.isInitialized &&
+        !jobStore?.isJobFilterActive &&
+        renderNoJobsSelected()}
     </Grid>
   );
 
-  const renderTable = () => (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
-
-  return (
-    <div>
-      {renderCharts()}
-      {renderTable()}
+  const renderComponent = () => (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={12}>
+          <BarChartJobOccupation id="job-categories-dashboard" />
+        </Grid>
+        {jobStore?.isInitialized && renderJobDescriptionSection()}
+      </Grid>
     </div>
   );
+
+  return renderComponent();
 };
+
+export const Dashboard = inject(storeName.JOB_STORE)(
+  observer(DashboardComponent),
+);
