@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { BarChartJobOccupation } from '../../components';
+import { BarChartJobOccupation } from '../../component';
 import { inject, observer } from 'mobx-react';
 import { storeName } from '../../mobx/stores';
 import { JobStore } from '../../mobx/stores/job-store';

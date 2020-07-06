@@ -1,10 +1,10 @@
 import React from 'react';
-import { DashboardPage } from './pages/dashboard-page/dashboard-page';
+import { DashboardPage } from './page/dashboard-page/dashboard-page';
 import { Container } from '@material-ui/core';
 import { Provider } from './mobx/stores';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { routes } from './routes';
-import { JobPage } from './pages/job-page/job-page';
+import { JobPage } from './page/job-page/job-page';
 
 function App() {
   return (

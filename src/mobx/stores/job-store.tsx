@@ -1,6 +1,6 @@
 import { action, computed, observable } from 'mobx';
 import { Job } from '../models';
-import { fetchJobs } from '../../apis/job-api';
+import { fetchJobs } from '../../api/job-api';
 
 export class JobStore {
   @observable

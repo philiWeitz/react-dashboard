@@ -8,6 +8,9 @@
     "build": "react-app-rewired build",
     "lint": "tslint src/**/*.ts*"
   },
+  "engines" : {
+    "node" : ">12"
+  },
   "dependencies": {
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
