@@ -1,0 +1,12 @@
+language: node
+
+node_js:
+  - 12
+
+install:
+  - node --version
+  - yarn install
+
+script:
+  - yarn lint
+  - yarn test

@@ -17,6 +17,6 @@
     "no-implicit-dependencies": false,
     "interface-name": false,
     "jsx-boolean-value": false,
-    "no-submodule-imports": [true, "@material-ui/core"]
+    "no-submodule-imports": [true, "@material-ui/core", "react-test-renderer"]
   }
 }
