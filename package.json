@@ -20,7 +20,7 @@
     "add": "2.0.6",
     "axios": "0.19.2",
     "chart.js": "2.9.3",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "lodash": "4.17.15",
     "mobx": "5.15.4",
     "mobx-logger": "0.7.1",
